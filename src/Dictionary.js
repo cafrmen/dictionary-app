@@ -15,9 +15,10 @@ export default function Dictionary() {
 
     return (
         <div className="card">
+            <h5>Which word are you looking for?</h5>
+
             <form onSubmit={search}>
-                <input onChange={handleKeywordChange} type="search" placeholder="Which word are you looking for?"></input>
-                <input type="submit" placeholder="Search"></input>
+                <input className="typeInput" onChange={handleKeywordChange} type="search"></input>
             </form>
         </div>
     )
