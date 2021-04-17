@@ -22,8 +22,11 @@ header {
 .card {
   display: block;
   margin: 0 auto;
-  text-align: center;
   max-width: 600px;
+}
+
+.paragraph {
+  text-align: justify;
 }
 
 h5 {
