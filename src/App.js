@@ -1,4 +1,3 @@
-import logo from "./book-solid.svg";
 import Dictionary from "./Dictionary";
 import './App.css';
 
