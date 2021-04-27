@@ -2,33 +2,77 @@
   text-align: center;
 }
 
-header {
-  margin-top: 30px;
+body {
+  background: #fbf2d5;
+  color: #394a51;
 }
 
-.logo {
-  width: 45px;
-  margin-right: 10px;
-  display: inline;
+header {
+  background: #7fa99b;
+  padding: auto;
 }
 
 .title {
   display: inline;
-  color: darkslategrey;
-  position: relative;
-  top: 8px;
+  color: #fdc57b;
+  background-color: #7fa99b;
 }
 
-.card {
-  display: block;
-  margin: 0 auto;
-  max-width: 600px;
+.Dictionary h3 {
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.paragraph {
-  text-align: justify;
+.Dictionary section {
+  background-color: #fdfcfa;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 5px rgba(11, 156, 49, 0.1);
 }
 
-h5 {
-  margin-top: 18px;
+.Dictionary input {
+  width: 100%;
+  color: #394a51;
+  border: 1px solid #7fa99b;
+  border-radius: 8px;
+}
+
+.Phonetic a {
+  text-decoration: none;
+  color: #394a51;
+  font-size: 12px;
+  padding: 2px;
+  margin-right: 10px;
+  border: 1px solid #7fa99b;
+  border-radius: 30px;
+  transition: all 150ms ease-in-out;
+}
+
+.Phonetic a:hover {
+  background: #7fa99b;
+  color: #fbf2d5;
+}
+
+.Meaning h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.Meaning .example {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.Synonyms {
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.Synonyms li {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 12px;
 }

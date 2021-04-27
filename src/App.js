@@ -7,7 +7,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header>
-          <img src={ logo } alt="open book" className="logo" />
           <h1 className="title">DICTIONARY</h1> 
         </header>
 

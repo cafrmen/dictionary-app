@@ -3,38 +3,58 @@ import axios from "axios";
 import Results from "./Results";
 
 export default function Dictionary() {
-    const [keyword, setKeyword] = useState(null);
-    const [results, setResults] = useState(null);
+  const [keyword, setKeyword] = useState("moonlight");
+  const [results, setResults] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
     function handleResponse(response) {
         //console.log(response.data[0]);
         setResults(response.data[0]);
     }
-
-    function search(event) {
-        event.preventDefault();
-        //alert(`Searching for ${keyword}`);
-
-        let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+  
+  function search () {
+      let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
         //console.log(apiURL);
         axios.get(apiURL).then(handleResponse);
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      search();
+        //alert(`Searching for ${keyword}`);
     }
 
     function handleKeywordChange(event) {
         //console.log(event.target.value);
         setKeyword(event.target.value);
     }
+  
+  function load() {
+    setLoaded(true);
+    search();
+    }
+  
+  if (loaded) {
+  return (
+    <div className="Dictionary">
 
-    return (
-        <div className="card">
-            <h5>Which word are you looking for?</h5>
+      <section>
+      <h3>Which word do you want to look up?</h3>
 
-            <form onSubmit={search}>
-                <input className="typeInput" onChange={handleKeywordChange} type="search"></input>
-            </form>
+      
+        <form onSubmit={ handleSubmit }>
+          <input className="typeInput" onChange={ handleKeywordChange } type="search" placeholder="moonlight"></input>
+        </form>
+      </section>
 
-            <Results results={results} />
+     <Results results={ results } />
 
-        </div>
-    )
+    </div>
+  );
+  } else {
+    load();
+    return "Loading...";
+  }
+
+  
 }
