@@ -15,6 +15,19 @@ export default function App() {
           <Dictionary />
         </main>
 
+        <br />
+        
+        <footer>
+          <small>
+            <a href="https://github.com/cafrmen/dictionary-app" target="_blank" rel="noreferrer">Open source </a>
+            by Caf. Hosted at
+            <a
+              href="https://distracted-bhabha-6b1eea.netlify.app"
+              target="_blank" rel="noreferrer"> Netlify.
+            </a>
+          </small>
+        </footer>
+
       </div>
     </div>
   );

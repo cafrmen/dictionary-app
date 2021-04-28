@@ -4,6 +4,16 @@
   margin: 0 auto;
 }
 
+footer {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: #7fa99b;
+}
+
 body {
   background: #fbf2d5;
   color: #394a51;
@@ -59,6 +69,10 @@ header {
 .Meaning h5 {
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+.Meaning .description {
+  margin-top: 10px;
 }
 
 .Meaning .example {
